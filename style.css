@@ -1,0 +1,16 @@
+*{
+	font-family:"Segoe UI",Arial,sans-serif
+}
+#divToExport{
+  width: 1000px;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  
+}
+.main>div{
+  flex-grow: 1;
+}

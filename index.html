@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Page pdf export</title>
+  <link href="style.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <div id="divToExport">
+    <div class="main">
+      <div>
+        <img
+          src="data:image/png;base64,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"
+          alt="">
+      </div>
+      <div>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quaerat ipsum explicabo ducimus alias quas est
+          enim, quisquam aliquid at molestiae autem voluptatum quis sint voluptate eligendi distinctio nesciunt
+          molestias eius harum deserunt, mollitia dolor doloribus deleniti! Alias vitae possimus rem debitis id
+          dignissimos? Iste sint earum eligendi error in. Perspiciatis, neque animi distinctio unde nesciunt libero
+          dignissimos porro? Praesentium.</p>
+      </div>
+    </div>
+
+    <button onclick="generatePDF()">Download</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
